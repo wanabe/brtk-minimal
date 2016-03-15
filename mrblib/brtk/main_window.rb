@@ -5,13 +5,14 @@ class Brtk
 
     def setup
       widget.set_default_size 1000, 600
-      widget.signal_connect("destroy") do |*o|
-        Gtk.main_quit
-      end
     end
 
     def run
       widget.show_all
+    end
+
+    def on_destroy
+      Gtk.main_quit
     end
   end
 end
