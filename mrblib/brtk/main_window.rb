@@ -8,6 +8,9 @@ class Brtk
       widget.signal_connect("destroy") do |*o|
         Gtk.main_quit
       end
+    end
+
+    def run
       widget.show_all
     end
   end
