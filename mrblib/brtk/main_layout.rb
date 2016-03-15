@@ -1,9 +1,10 @@
 class Brtk
   class MainLayout < Base::Layout
-    def initialize(uri = nil)
+    def initialize(brtk)
+      super
       setup Gtk::Box, Gtk::Orientation::VERTICAL, 0
 
-      @browser_window = BrowserWindow.new(uri)
+      @browser_window = BrowserWindow.new(brtk)
       parts.each do |part|
         pack_start part, true, true, 2
       end
