@@ -2,10 +2,7 @@ GirFFI::setup :WebKit
 
 class Brtk
   class WebRenderer < Base::Widget
-    def initialize(brtk)
-      super
-      setup WebKit::WebView
-    end
+    widget WebKit::WebView
 
     def open(uri)
       widget.open uri

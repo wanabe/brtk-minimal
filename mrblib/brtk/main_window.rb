@@ -1,8 +1,8 @@
 class Brtk
   class MainWindow < Base::Widget
+    widget Gtk::Window, Gtk::WindowType::TOPLEVEL
     def initialize(brtk)
       super
-      setup Gtk::Window, Gtk::WindowType::TOPLEVEL
       widget.set_default_size 1000, 600
       add MainLayout.new(brtk)
 
